@@ -1,5 +1,5 @@
 import LoginPg from "./LoginPg";
-import DashboardPage from "./DashboardPage";
+import DashboardPage from "..pages/DashboardPage";
 
 class POManager {
   constructor(page) {

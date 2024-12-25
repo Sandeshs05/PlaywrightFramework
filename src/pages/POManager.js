@@ -1,11 +1,14 @@
 import LoginPg from "./LoginPg";
-import DashboardPage from "..pages/DashboardPage";
+import DashboardPg from "./DashboardPg";
+import commonComponent from "./commonComponent";
+import { get } from "http";
 
 class POManager {
   constructor(page) {
     this.page = page;
     this.loginPage = new LoginPg(page);
-    this.dashboardPage = new DashboardPage(page);
+    this.dashboardPage = new DashboardPg(page);
+    this.commonComponent = new commonComponent(page);
   }
 
   getLoginPage() {
@@ -14,6 +17,9 @@ class POManager {
   getDashboardPage() {
     return this.dashboardPage;
   }
-}
 
+  getCommonComponents() {
+    return this.commonComponent;
+  }
+}
 export default POManager;

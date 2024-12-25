@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "regression": "rm -rf ./allure-results && npx playwright test --grep @regression",
-    "smoke": "rm -rf ./allure-results && npx playwright test --grep @smoke --reporter=line,allure-playwright",
-    "test": "rm -rf ./allure-results && npx playwright test --reporter=line,allure-playwright",
-    "allureRun": "rm -rf ./allure-results && npx playwright test loginTest.spec.js --config playwright.config1.js --project=Chrome --reporter=line,allure-playwright",
+    "regression": "npx playwright test --grep @regression",
+    "smoke": "npx playwright test --grep @smoke --reporter=line,allure-playwright",
+    "test": "npx playwright test --reporter=line,allure-playwright",
+    "allureRun": "npx playwright test loginTest.spec.js --config playwright.config1.js --project=Chrome --reporter=line,allure-playwright",
     "allureGenerate": "allure generate ./allure-results --clean",
     "allureOpen": "allure open ./allure-report"
   },
